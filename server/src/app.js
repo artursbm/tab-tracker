@@ -28,4 +28,11 @@ app.get('/status', (req, res) => {
   })
 })
 
+app.post('/register', (req, res) => {
+  res.send({
+    // use `` when wanting to call variables inside string, not  ''
+    message: `Hello, ${req.body.username}! Your user was registered! Have fun!`
+  })
+})
+
 app.listen(process.env.PORT || 8081)
