@@ -9,7 +9,8 @@ const bodyParser = require('body-parser')
 // will require what's inside index.js inside a node_modules folder
 const cors = require('cors')
 const morgan = require('morgan')
-
+const {sequelize} = require('./models')
+const config = require('./config/config')
 // really basic web app, build REST end points
 const app = express()
 // enable some packages
@@ -20,6 +21,7 @@ app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
 
+require('./routes')(app)
 // express allows HTTP commands as get, post, put, delete, patch, etc...
 // want just to return something here
 app.get('/status', (req, res) => {
@@ -28,11 +30,7 @@ app.get('/status', (req, res) => {
   })
 })
 
-app.post('/register', (req, res) => {
-  res.send({
-    // use `` when wanting to call variables inside string, not  ''
-    message: `Hello, ${req.body.username}! Your user was registered! Have fun!`
-  })
+sequelize.sync().then(() => {
+  app.listen(config.port)
+  console.log(`Server started on port ${config.port}`)
 })
-
-app.listen(process.env.PORT || 8081)
