@@ -9,6 +9,8 @@ const bodyParser = require('body-parser')
 // will require what's inside index.js inside a node_modules folder
 const cors = require('cors')
 const morgan = require('morgan')
+// initialize a module to be exported that uses sequelize
+// returns a sequelize object
 const {sequelize} = require('./models')
 const config = require('./config/config')
 // really basic web app, build REST end points
@@ -20,7 +22,7 @@ app.use(morgan('combined'))
 // allow the Express server to parse JSON data
 app.use(bodyParser.json())
 app.use(cors())
-
+// attach different endpoints to the app application
 require('./routes')(app)
 // express allows HTTP commands as get, post, put, delete, patch, etc...
 // want just to return something here
@@ -29,7 +31,8 @@ app.get('/status', (req, res) => {
     message: 'hello, world!' // this shows that a server is handling endpoint response at /status
   })
 })
-
+// connects sequelize to database that is connected to
+// or creates one if needed
 sequelize.sync().then(() => {
   app.listen(config.port)
   console.log(`Server started on port ${config.port}`)

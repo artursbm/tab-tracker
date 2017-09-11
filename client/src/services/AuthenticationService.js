@@ -7,7 +7,7 @@ export default {
   register (credentials) {
      // do a post request to the 'register' endpoint on a express server
      // and it is going to use the `credentials` data
-    return Api().post('register', credentials)
+    return Api().post('Register', credentials)
   }
 }
 
@@ -16,5 +16,4 @@ export default {
 // AuthenticationService.register({
 //   email: 'johnsmith@gmail.com',
 //   password: 'johnsmith'
-//   username: 'johnS'
 // })

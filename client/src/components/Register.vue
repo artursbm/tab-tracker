@@ -6,7 +6,6 @@
     <br>
     <input type="password" name="password" v-model="password" placeholder="password"/>
     <br>
-    <input type="text" name="username" v-model="username" placeholder="username">
     <br>
     <button @click="register">Register</button>
 
@@ -20,8 +19,7 @@ export default {
   data () {
     return {
       email: '',
-      password: '',
-      username: ''
+      password: ''
     }
   },
   // watch: {
@@ -34,8 +32,7 @@ export default {
       // pegarei os dados do authentication service, esperarei pela response, e então...
       const response = await AuthenticationService.register({
         email: this.email,
-        password: this.password,
-        username: this.username
+        password: this.password
       })
       console.log(response.data)
     }

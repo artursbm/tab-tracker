@@ -1,10 +1,10 @@
+// Build up a User sequelize model
 module.exports = (sequelize, DataTypes) => {
   sequelize.define('User', {
     email: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
       unique: true
     },
-    password: DataType.STRING,
-    username: DataType.STRING
+    password: DataTypes.STRING
   })
 }
