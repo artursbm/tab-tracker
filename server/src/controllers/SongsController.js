@@ -20,9 +20,10 @@ module.exports = {
   },
 
   async post (req, res) {
+    
     try {
-      const song = await Songs.create(req, body)
-      res.send(song)
+      const songs = await Songs.create(req.body)
+      res.send(songs)
     } catch (err) {
       res.status(500).send({
         error: 'Algo de errado aconteceu ao tentar criar as músicas'

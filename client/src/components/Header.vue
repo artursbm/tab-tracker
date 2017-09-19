@@ -44,7 +44,7 @@ export default {
 }
 
 .logo:hover {
-  color: indigo;
+  color: cyan;
 }
 
 </style>

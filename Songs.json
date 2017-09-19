@@ -1,8 +1,10 @@
-"title": "Echoes",
-"artist": "Pink Floyd",
-"genre": "Progressive Rock",
-"album": "Meddle",
-"albumImage": "https://images-na.ssl-images-amazon.com/images/I/51I7BoDxRCL.jpg",
-"youtubeID": "53N99Nim6WE",
-"lyrics": "",
-"tab": ""
+{
+  "title": "Echoes",
+  "artist": "Pink Floyd",
+  "genre": "Progressive Rock",
+  "album": "Meddle",
+  "albumImage": "https://images-na.ssl-images-amazon.com/images/I/51I7BoDxRCL.jpg",
+  "youtubeID": "53N99Nim6WE",
+  "lyrics": "",
+  "tab": ""
+}

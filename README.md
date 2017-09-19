@@ -75,7 +75,3 @@ o servidor pode ser conectado à porta configurada.
 > Vuex vai ajudar a manter os dados de usuário sendo persistentes em todas as telas
 
 > Instalando também vuex-router, que mantém sincronia entre o Vuex e o roteamento feito
-
-### Nona funcionalidade: A HORA DA VERDADE ---> IMPLEMENTANDO O QUIZ! ###
-
-> O quiz só estará disponível quando o usuário logar, ou registrar-se

@@ -9,6 +9,10 @@ import Api from '@/services/Api'
 export default {
   index () {
     return Api().get('songs')
+  },
+  post (song) {
+    // post request to songs endpoint, passing a song as data
+    return Api().post('songs', song)
   }
 }
 

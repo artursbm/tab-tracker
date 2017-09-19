@@ -50,6 +50,9 @@ export default {
         })
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
+        this.$router.push({
+          name: 'login'
+        })
       } catch (error) {
         // if status != 200 (response correctly), this happens
         // axios will return the message from response, which is defined in 8081
@@ -63,7 +66,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component (Register.vue) only -->
 <style scoped>
-.error {
+/* .error {
   color: red;
-}
+} */
 </style>

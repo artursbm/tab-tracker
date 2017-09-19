@@ -49,7 +49,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component (Login.vue) only -->
 <style scoped>
-.error {
+/* .error {
   color: red;
-}
+} */
 </style>
