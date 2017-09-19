@@ -51,7 +51,7 @@ export default {
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
         this.$router.push({
-          name: 'login'
+          name: 'Login'
         })
       } catch (error) {
         // if status != 200 (response correctly), this happens

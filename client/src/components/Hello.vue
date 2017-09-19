@@ -5,11 +5,12 @@
 </template>
 
 <script>
+import Login from '@/components/Login'
 export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Hello, tab-tracker!'
+      msg: `Hello, ${Login.data[0]}`
     }
   }
 }

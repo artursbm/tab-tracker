@@ -39,6 +39,9 @@ export default {
         // the method that calls the mutation that stores the token)
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
+        this.$router.push({
+          name: 'Hello'
+        })
       } catch (error) {
         this.error = error.response.data.error
       }

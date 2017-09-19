@@ -29,6 +29,9 @@ export default new Vuex.Store({
     },
     setUser (state, user) {
       state.user = user
+    },
+    getUser (state, user) {
+      user = state.user
     }
   },
   actions: {
@@ -40,6 +43,9 @@ export default new Vuex.Store({
     },
     setUser ({commit}, user) {
       commit('setUser', user)
+    },
+    getUser ({push}, user) {
+      push('getUser', user)
     }
   }
 })
