@@ -11,7 +11,7 @@
 // here we will modify routes to do sequelize stuff
 const AuthenticationController = require('./controllers/AuthenticationController')
 const AuthenticationControllerPolicy = require('./policies/AuthenticationControllerPolicy')
-
+const SongsController = require('./controllers/SongsController')
 module.exports = (app) => {
   // Register endpoint that receives a JSON object (credential) from the AuthenticationService, which hits here 
   // because of the axios connector
@@ -20,4 +20,6 @@ module.exports = (app) => {
   app.post('/register', AuthenticationControllerPolicy.register, AuthenticationController.register)
   // por agora, login não precisará de política de autenticação
   app.post('/login', AuthenticationController.login)
+  // need to create a songs endpoint
+  app.get('/songs', SongsController.index)
 }
