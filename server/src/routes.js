@@ -18,8 +18,13 @@ module.exports = (app) => {
   // AuthenticationController.register is defined in the controllers folder, and it is called here,
   // so it basically is organizing the declarations
   app.post('/register', AuthenticationControllerPolicy.register, AuthenticationController.register)
-  // por agora, login não precisará de política de autenticação
+  // por agora, login não tem política de autenticação (além de precisar dar req.passwd === dbUser.passwd)
   app.post('/login', AuthenticationController.login)
-  // need to create a songs endpoint
+  // at the songs endpoint, there are two methods, index (to fetch songs)
   app.get('/songs', SongsController.index)
+  // and post(), to create new songs to the webapp.
+  // Both are inside the controller for the song,
+  // and this will allow me to create as many methods as I need in the future
+  // for the same model at the same endpoint.
+  app.post('/songs', SongsController.post)
 }
