@@ -1,8 +1,8 @@
 <template>
  <v-layout column>
     <v-flex xs10 offset-xs1>
-      <panel title="Perguntas">
-        <h5>Bem vindo. Selecione a categoria desejada:</h5>
+      <panel title="Songs">
+        <h5>Bem vindo. Pesquise sobre músicas aqui!</h5>
       </panel>
     </v-flex>
   </v-layout>

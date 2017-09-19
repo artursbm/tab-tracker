@@ -1,7 +1,6 @@
 <template>
  <v-footer class="indigo">
-      <span class="white--text">Aonde Ir - Observatório para a qualidade da Lei -
-        Faculdade de Direito da Universidade Federal de Minas Gerais - 2017</span>
+      <span class="white--text">Tab Tracker - Um tutorial em Vue.js, Express e Node.js utilizando SQL</span>
   </v-footer>  
 </template>
 

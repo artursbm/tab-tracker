@@ -1,7 +1,7 @@
 {
   "name": "client",
-  "version": "0.0.1",
-  "description": "Um projeto do web app Aonde Ir em Vue.js",
+  "version": "0.0.2",
+  "description": "Um projeto do web app Tab Tracker em Vue.js",
   "author": "Artur Mello <artursbmello@gmail.com>",
   "private": true,
   "scripts": {

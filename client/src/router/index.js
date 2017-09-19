@@ -5,7 +5,7 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
-import Quiz from '@/components/Quiz'
+import Songs from '@/components/Songs'
 Vue.use(Router)
 
 export default new Router({
@@ -26,9 +26,9 @@ export default new Router({
       component: Login
     },
     {
-      path: '/quiz',
-      name: 'Quiz',
-      component: Quiz
+      path: '/songs',
+      name: 'Songs',
+      component: Songs
 
     }
   ]

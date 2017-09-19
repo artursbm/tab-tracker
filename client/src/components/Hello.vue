@@ -1,8 +1,6 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h3>{{ msg4 }}</h3>
-    
   </div>
 </template>
 
@@ -11,8 +9,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Bem vindo ao web app Aonde Ir!',
-      msg4: 'Para começar, faça login ou registre-se!'
+      msg: 'Hello, tab-tracker!'
     }
   }
 }

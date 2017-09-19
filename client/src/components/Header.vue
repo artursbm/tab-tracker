@@ -1,12 +1,11 @@
 <template>
   <v-toolbar fixed class="indigo" dark elevation-5>
     <v-toolbar-title class="mr-4">
-      <router-link to="/" tag="span" class="logo">Aonde Ir</router-link>
+      <router-link to="/" tag="span" class="logo">Tab Tracker</router-link>
     </v-toolbar-title>
 
     <v-toolbar-items>
-      <!-- TODO: IMPLEMENTAR ROTA PARA O QUIZ -->
-      <v-btn flat dark to="quiz" v-if="$store.state.isUserLoggedIn">Iniciar Quiz</v-btn>
+      <v-btn flat dark to="songs" v-if="$store.state.isUserLoggedIn">Browse</v-btn>
     </v-toolbar-items>
     <!-- v-spacer joga os itens abaixo dele para o canto direito da toolbar -->
     <v-spacer></v-spacer>

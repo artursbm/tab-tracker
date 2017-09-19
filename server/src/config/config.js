@@ -2,7 +2,7 @@
 module.exports = {
   port: process.env.PORT || 8081,
   db: {
-    database: process.env.DB_NAME || 'AondeIr',
+    database: process.env.DB_NAME || 'TabTracker',
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASS || '123456',
     options: {
@@ -17,7 +17,7 @@ module.exports = {
   },
   authentication: {
     // this will sign the JWT using a secret that is only known by the server
-    jwtSecret: process.env.JWT_SECRET || 'Aonde Ir Secret Token'
+    jwtSecret: process.env.JWT_SECRET || 'TabTracker Secret Token'
   }
 
 }
