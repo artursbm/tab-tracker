@@ -1,21 +1,22 @@
 <template>
   <v-layout column>
     <v-flex xs12>
-      <panel title="Song Metadata">
-        <v-text-field label="Title" v-model="title"></v-text-field>
-        <v-text-field label="Artist" v-model="artist"></v-text-field>
-        <v-text-field label="Genre" v-model="genre"></v-text-field>
-        <v-text-field label="Album" v-model="album"></v-text-field>
-        <v-text-field label="Album Image URL" v-model="albumImage"></v-text-field>
-        <v-text-field label="You Tube ID" v-model="youtubeID"></v-text-field>
+      <panel title="Dados da Música">
+        <v-text-field label="Título" v-model="song.title" :rules="[required]"></v-text-field>
+        <v-text-field label="Artista" v-model="song.artist" :rules="[required]"></v-text-field>
+        <v-text-field label="Gênero" v-model="song.genre" :rules="[required]"></v-text-field>
+        <v-text-field label="Álbum" v-model="song.album" :rules="[required]"></v-text-field>
+        <v-text-field label="Capa do álbum - URL" v-model="song.albumImage" :rules="[required]"></v-text-field>
+        <v-text-field label="YouTube ID" v-model="song.youtubeID" :rules="[required]"></v-text-field>
       </panel>
     </v-flex>
     <v-flex xs12>
-      <panel title="Song Structure" class="mt-2">
-        <v-text-field name="input-7-1" multi-line label="Lyrics" v-model="lyrics"></v-text-field>
-        <v-text-field name="input-7-1" multi-line label="Tabs" v-model="tabs"></v-text-field>
+      <panel title="Letra e Tablatura" class="mt-2">
+        <v-text-field multi-line label="Letra" v-model="song.lyrics" :rules="[required]"></v-text-field>
+        <v-text-field multi-line label="Tablatura" v-model="song.tab"></v-text-field>
       </panel>
     </v-flex>
+    <span class="danger-alert" v-if="error">{{ error }}</span>
     <v-btn dark class="indigo" @click="create">Criar Música</v-btn>
   </v-layout>
 </template>
@@ -29,18 +30,30 @@ export default {
   },
   data () {
     return {
-      title: null,
-      artist: null,
-      genre: null,
-      album: null,
-      albumImage: null,
-      youtubeID: null,
-      lyrics: null,
-      tab: null
+      song: {
+        title: null,
+        artist: null,
+        genre: null,
+        album: null,
+        albumImage: null,
+        youtubeID: null,
+        lyrics: null,
+        tab: null
+      },
+      error: null,
+      required: (value) => !!value || 'Required'
     }
   },
   methods: {
     async create () {
+      this.error = null
+      const fieldsFilled = Object
+      .keys(this.song)
+      .every(key => !!this.song[key])
+      if (!fieldsFilled) {
+        this.error = 'Por favor, preencha todos os dados requeridos'
+        return
+      }
       // call API
       try {
         await SongsService.post(this.song)

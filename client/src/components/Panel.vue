@@ -2,6 +2,10 @@
   <div class="white elevation-2">
     <v-toolbar flat dense class="indigo" dark>
       <v-toolbar-title>{{title}}</v-toolbar-title>
+      <!-- Como vou adicionar um botão de Add aqui em alguns paineis, mas
+      não em todos, vou deixar esse slot disponível para as páginas que quiserem
+      utilizar ele para adicionar, por exemplo, o botão ADD -->
+      <slot name="action"/> 
     </v-toolbar>
 
     <div class="pl-4 pr-4 pt-2 pb-2">

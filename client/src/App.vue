@@ -39,4 +39,8 @@ img {
   height: 200px;
   width: 200px;
 }
+
+.danger-alert {
+  color: red
+}
 </style>

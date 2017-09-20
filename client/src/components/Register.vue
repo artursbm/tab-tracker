@@ -3,9 +3,11 @@
     <v-flex xs10 offset-xs1>
       <panel title="Registrar">
         <!-- When Vue.js starts, it will look for the v-models and will bind it to the controller (script below) -->
-        <v-text-field label="Nome de usuário" v-model="username"></v-text-field>
-        <v-text-field label="E-mail" v-model="email"></v-text-field>
-        <v-text-field name="password" label="Crie sua senha" hint="A senha deve conter pelo menos 8 caracteres" min="8" max="32" type="password" v-model="password"></v-text-field>
+        <v-text-field label="Nome de usuário" v-model="username" :rules="[required]"></v-text-field>
+        <v-text-field label="E-mail" v-model="email" :rules="[required]"></v-text-field>
+        <v-text-field name="password" label="Crie sua senha" 
+          hint="A senha deve conter pelo menos 8 caracteres" min="8" max="32"
+          type="password" v-model="password" :rules="[required]"></v-text-field>
         <!-- The goal here is to, when I click the Register button, it will make something to the data typed; Add a listener to the button -->
         <!-- Vou colocar a mensagem de erro logo acima do botão de registro -->
         <div class="error" v-html="error" />
@@ -32,7 +34,8 @@ export default {
       username: '',
       email: '',
       password: '',
-      error: null
+      error: null,
+      required: (value) => !!value || 'Dados requeridos.'
     }
   },
   components: {
