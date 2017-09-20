@@ -27,4 +27,5 @@ module.exports = (app) => {
   // and this will allow me to create as many methods as I need in the future
   // for the same model at the same endpoint.
   app.post('/songs', SongsController.post)
+  app.get('/songs/:songId', SongsController.show)
 }

@@ -18,7 +18,7 @@
             <v-flex xs6>
               <div class="song-title">{{song.title}}</div>
               <div class="song-artist">{{song.artist}}</div>
-              <div class="song-album">{{song.album}} - <span class="song-genre">{{song.genre}}</span></div>
+              <!-- <div class="song-album">{{song.album}} - <span class="song-genre">{{song.genre}}</span></div> -->
               <!-- sempre que eu clicar aqui, me leva pra música com id = songId -->
               <v-btn dark class="indigo" :to="{ name: 'song', params: { songId: song.id }}">Visualizar</v-btn>
             </v-flex>
@@ -70,19 +70,12 @@ export default {
 }
 
 .song-artist{
-font-size: 16pt;
-}
-
-.song-album{
-font-size: 12pt;
-}
-
-.song-genre{
-font-size: 10pt;
+font-size: 14pt;
 }
 
 .album-image {
   width: 150px;
   height: 150px;
 }
+
 </style>

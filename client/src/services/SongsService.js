@@ -13,6 +13,9 @@ export default {
   post (song) {
     // post request to songs endpoint, passing a song as data
     return Api().post('songs', song)
+  },
+  show (songId) {
+    return Api().get(`songs/${songId}`)
   }
 }
 
