@@ -18,7 +18,7 @@
     </v-flex>
     <v-flex xs6 class="ml-2">
       <panel title="Letra">
-        <div class="song-lyric">{{song.lyrics}}</div>
+        <textarea readonly v-model="song.lyrics"></textarea>
       </panel>
     </v-flex>
   </v-layout>    
@@ -74,5 +74,16 @@ export default {
 .album-image {
   width: 150px;
   height: 150px;
+}
+textarea {
+  width: 90%;
+  font-family: monospace;
+  border: none;
+  border-style: none;
+  border-color: transparent;
+  height: 600px;
+  overflow: auto;
+  padding: 20px;
+
 }
 </style>

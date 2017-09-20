@@ -1,7 +1,7 @@
 <template>
- <v-footer class="indigo">
-      <span class="white--text">Tab Tracker - Um tutorial em Vue.js, Express e Node.js utilizando SQL</span>
-  </v-footer>  
+  <v-footer class="indigo">
+    <span class="white--text">Tab Tracker - Um tutorial em Vue.js, Express e Node.js utilizando SQL</span>
+  </v-footer>
 </template>
 
 <script>
@@ -11,8 +11,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.white--text{
+.white--text {
   font-size: 75%;
 }
-
 </style>
