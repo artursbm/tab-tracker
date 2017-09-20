@@ -5,7 +5,7 @@
         <v-btn :to="{name: 'songs-create'}" dark medium right bottom fab absolute class="pink" slot="action">
           <v-icon>add</v-icon>
         </v-btn>
-        <h5>Bem vindo. Pesquise as músicas aqui!</h5>
+        <h5>Bem vindo. Encontre as músicas aqui!</h5>
         
         <!-- creating a render now, the v-for is going to show lots of songs -->
         <div class="song" v-for="song in songs" :key="song.id">

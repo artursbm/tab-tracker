@@ -18,6 +18,9 @@
     </v-flex>
     <v-flex xs6 class="ml-2">
       <panel title="Letra">
+        <v-btn dark small right bottom fab absolute class="pink" slot="action">
+          <v-icon>music_note</v-icon>
+        </v-btn>
         <textarea readonly v-model="song.lyrics"></textarea>
       </panel>
     </v-flex>
@@ -56,11 +59,11 @@ export default {
 }
 
 .song-title {
-  font-size: 28pt;
+  font-size: 26pt;
 }
 
 .song-artist {
-  font-size: 18pt;
+  font-size: 16pt;
 }
 
 .song-album {
