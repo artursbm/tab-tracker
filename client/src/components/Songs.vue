@@ -48,7 +48,7 @@ export default {
       songs: null
     }
   },
-  // where there is a await, there is a async method
+  // where there is a await, there is an async method
   async mounted () {
     // do a request to the backend for all the songs
     // do a get request at the moment that the vue component is mounted to the page
