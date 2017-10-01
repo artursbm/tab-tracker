@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     albumImage: DataTypes.STRING,
     youtubeID: DataTypes.STRING,
     lyrics: DataTypes.TEXT,
-    tab: DataTypes.TEXT 
+    tab: DataTypes.TEXT
   })
 
   return Song
